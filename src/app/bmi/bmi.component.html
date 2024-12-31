@@ -1,0 +1,40 @@
+<h1>BMI Calculator</h1>
+    <label for="">Height:</label>
+    <input type="number" id="height"><br>
+    <label for="">Weight:</label>
+    <input type="number" id="weight"><br>
+    <h2 id="bmi">XXXXX</h2>
+
+    <button onclick="submit()">Submit</button>
+
+    <script>
+
+        function submit(){
+            var height= document.getElementById('height').value;
+            console.log(height);
+            var weight= document.getElementById('weight').value;
+            console.log(weight);
+
+            var result=weight/(height*height);
+            console.log(result);
+
+            if(result<18.5 && result>0){
+                var bmi= "Under Weight";
+            }else if(result>=18.5 && result<25){
+                var bmi= "Normal";
+            }else if(result>=25 && result<30){
+                var bmi= "Over Weight";
+            }else if(result>=30 && result<35){
+                var bmi= "Obese";
+            }else if(result>=35 && result<40){
+                var bmi= "Severely Obese";
+            }else if(result>=40){
+                var bmi= "Morbidly Obese";
+            }else{
+                alert('Error')
+            }
+            document.getElementById('bmi').innerText=bmi;
+        }
+
+             
+    </script>
