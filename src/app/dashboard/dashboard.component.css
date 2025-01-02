@@ -12,13 +12,13 @@ body{
 .left{
     width: 20%;
     height: 100%;
-    background-color: rgb(176, 142, 142);
+    background-color: rgb(63, 63, 63);
     color: white;
     padding-left: 20px;
 }
 .right{
     width: 80%;
     height: 100%;
-    background-color: rgb(70, 193, 113);
+    background-color: rgb(147, 95, 163);
     color: black;
 }

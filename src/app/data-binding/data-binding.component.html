@@ -1,0 +1,30 @@
+<h1>Data Binding</h1>
+
+<!-- interpolation -->
+<h3>{{name}}</h3>
+<h3>{{age}}</h3>
+<h3>{{email}}</h3>
+<h3>{{isIndian}}</h3>
+
+<input type="text" [(ngModel)]="phone"><br>
+
+<!-- Event binding -->
+<!-- <input type="text" (keyup)="typing()"><br> -->
+<button [disabled]="isIndian" (click)="submit()">Submit</button><br><br><br>
+
+
+<label for="">num1:</label>
+<input type="number" [(ngModel)]="num1"><br>
+<label for="">num2:</label>
+<input type="number" [(ngModel)]="num2"><br>
+<button [disabled]="!num1 || !num2" (click)="sum()">Sum</button>
+
+<h2>Sum is : {{result}}</h2>
+
+<!-- <label for="">Name:</label>
+<input type="text"><br>
+<label for="">Email:</label>
+<input type="email"><br>
+<label for="">Phone Number:</label>
+<input type="number"><br> -->
+
