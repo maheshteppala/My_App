@@ -10,6 +10,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
     {path:'rectangle',component:RectangleComponent},
     {path:'circle',component:CircleComponent},
     {path:'bmi',component:BmiComponent},
-    {path:'data-binding',component:DataBindingComponent}
+    {path:'data-binding',component:DataBindingComponent},
+    {path:'directives',component:DirectivesComponent}
   ]},
   {path:'**',component:ErrorComponent}
 ];
