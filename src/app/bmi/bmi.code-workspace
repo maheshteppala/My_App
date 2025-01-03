@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../calculator"
+		},
+		{
+			"path": "../circle"
+		},
+		{
+			"path": "../dashboard"
+		},
+		{
+			"path": "../data-binding"
+		},
+		{
+			"path": "../error"
+		},
+		{
+			"path": "../home"
+		},
+		{
+			"path": "../login"
+		},
+		{
+			"path": "../rectangle"
+		},
+		{
+			"path": "../welcome"
+		}
+	]
+}
