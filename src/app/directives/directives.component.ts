@@ -21,5 +21,7 @@ export class DirectivesComponent {
     {productName:'mobile',price:50000},
     {productName:'bike',price:500000},
     {productName:'car',price:5000000},
-  ]
+  ];
+
+  today:any= new Date();
 }
