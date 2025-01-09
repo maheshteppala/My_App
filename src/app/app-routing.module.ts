@@ -12,6 +12,17 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountComponent } from './account/account.component';
+import { MyntraComponent } from './myntra/myntra.component';
+import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { BlogComponent } from './blog/blog.component';
+import { MovieComponent } from './movie/movie.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -25,7 +36,17 @@ const routes: Routes = [
     {path:'bmi',component:BmiComponent},
     {path:'data-binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
-    {path:'employee',component:EmployeeComponent}
+    {path:'employee',component:EmployeeComponent},
+    {path:'flipkart',component:FlipkartComponent},
+    {path:'vehicle',component:VehicleComponent},
+    {path:'account',component:AccountComponent},
+    {path:'myntra',component:MyntraComponent},
+    {path:'mail',component:MailComponent},
+    {path:'pinterest',component:PinterestComponent},
+    {path:'weather',component:WeatherComponent},
+    {path:'blog',component:BlogComponent},
+    {path:'movie',component:MovieComponent},
+    {path:'profile',component:ProfileComponent}
   ]},
   {path:'**',component:ErrorComponent}
 ];

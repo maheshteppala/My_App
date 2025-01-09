@@ -1,0 +1,11 @@
+<!-- <div class="head"><h3>Pinterest</h3></div> -->
+
+<div class="parent">
+    
+    <div class="card" *ngFor="let pinterest of pinterests">
+        <img class="images" src="{{pinterest.download_url}}" alt="">
+        <div class="author">{{pinterest.author}}</div>
+        <a class="btn btn-primary" href="https://picsum.photos/id/0/5000/3333">Download</a>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+.top{
+    height: 80px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding-left: 370px;
+}
+.bottom{
+    height: 2200px;
+    width: 100%;
+    background-color: rgb(181, 181, 181);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.card{
+    height: 500px;
+    width: 31%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.pic{
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    border-radius: 50%;
+    display: flex;
+    padding-top: 20px;
+    
+}
+.pic~img{
+    width: 100%;
+}

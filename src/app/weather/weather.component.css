@@ -1,0 +1,9 @@
+.parent{
+    background-color: rgb(205, 205, 205);
+}
+
+.card{
+    width: 50%;
+    height: 50%;
+    background-color: rgb(255, 0, 0);
+}

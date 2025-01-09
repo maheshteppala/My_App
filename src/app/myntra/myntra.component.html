@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card" *ngFor="let myntra of myntras">
+        <img src="{{myntra.image}}" alt="">
+        <div class="rating">
+            <p>&star;{{myntra.rating.rate}} |  {{myntra.rating.count}}</p>
+        </div>
+        <!-- <div class="count">
+            <p>{{myntra.rating.count}} </p>
+        </div> -->
+        <div class="details">
+            <p class="category"><b>{{myntra.category}}</b></p>
+            <p class="details">{{myntra.title.slice(1,25)}}...</p>
+            <p class="details">{{myntra.description.slice(1,25)}}...</p>
+            <p class="price">Rs.{{myntra.price}}</p>
+        </div>
+    </div>
+</div>

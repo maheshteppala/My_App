@@ -17,6 +17,18 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from "@angular/common/http";
+import { AccountComponent } from './account/account.component';
+import { MyntraComponent } from './myntra/myntra.component';
+import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { BlogComponent } from './blog/blog.component';
+import { MovieComponent } from './movie/movie.component';
+import { ProfileComponent } from './profile/profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +43,23 @@ import { EmployeeComponent } from './employee/employee.component';
     BmiComponent,
     DataBindingComponent,
     DirectivesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    FlipkartComponent,
+    VehicleComponent,
+    AccountComponent,
+    MyntraComponent,
+    MailComponent,
+    PinterestComponent,
+    WeatherComponent,
+    BlogComponent,
+    MovieComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
