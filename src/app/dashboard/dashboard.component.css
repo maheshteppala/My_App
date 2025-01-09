@@ -1,13 +1,15 @@
 body{
     margin: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    
 }
 .parent{
     height: 100vh;
     width: 100vw;
     background-color: aqua;
     display: flex;
+    overflow: auto;
 }
 .left{
     width: 20%;
@@ -15,6 +17,7 @@ body{
     background-color: rgb(63, 63, 63);
     color: white;
     padding-left: 20px;
+    overflow: auto;
 }
 .right{
     width: 80%;

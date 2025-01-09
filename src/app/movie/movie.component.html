@@ -1,0 +1,13 @@
+<div class="parent">
+    <div class="card" *ngFor="let movie of movies">
+        <div class="left">
+            <img width="150px" src="data:image/png;base64,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" alt="">
+        </div> &nbsp; &nbsp;
+        <div class="right">
+            <h3>{{movie.movie}}</h3>
+            <p class="card-text">Rating: {{movie.rating}} <span *ngFor="let star of [].constructor(getStar(movie.rating))">⭐</span></p>
+            <a class="btn" href="{{movie.imdb_url}}">View on IMDB</a><br>
+        </div>
+        
+    </div>
+</div>

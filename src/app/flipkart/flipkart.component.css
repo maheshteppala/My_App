@@ -1,0 +1,32 @@
+
+.flipkart{
+    /* width: 100vw;
+    height: 100vh; */
+    height: 100%;
+    width: 100%;
+    background-color: rgb(1, 109, 88);
+    /* line-height: 10px; */
+}
+.top{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    padding-right: 300px;
+    color: white;
+}
+.middle{
+    width: 100%;
+    height: 35%;
+    display: flex;
+}
+.left{
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 10px;
+}
+.right{
+    line-height: 8px;
+    color: white;
+}
