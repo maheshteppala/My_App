@@ -1,0 +1,72 @@
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    background-color: rgb(179, 179, 179);
+}
+.card{
+    width: 400px;
+    height: 250px;
+    background-color: black;
+/*     
+    border-top-right-radius: 10%; */
+}
+.top{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(60, 74, 143);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    /* border-top-right-radius: 10%; */
+}
+.topleft{
+    width: 50px;
+    height: 100%;
+}
+.topright{
+    
+}
+.img1{
+    width: 100%;
+    height: 100%;
+}
+.middle{
+    width: 100%;
+    height: 58%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    line-height: 8px;
+    padding-top: 5px;
+}
+.mleft{
+    padding-left: 10px;
+}
+.mright{
+    width: 40%;
+    height: 100%;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+}
+.bottom{
+    width: 100%;
+    height: 22%;
+    background-color: rgb(75, 159, 101);
+}
+.bottomup{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bottomdown{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: -15px;
+}

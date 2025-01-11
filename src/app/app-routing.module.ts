@@ -22,6 +22,9 @@ import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentcardComponent } from './studentcard/studentcard.component';
+import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
 
 
 const routes: Routes = [
@@ -46,7 +49,10 @@ const routes: Routes = [
     {path:'weather',component:WeatherComponent},
     {path:'blog',component:BlogComponent},
     {path:'movie',component:MovieComponent},
-    {path:'profile',component:ProfileComponent}
+    {path:'profile',component:ProfileComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'studentcard',component:StudentcardComponent},
+    {path:'create-studentcard',component:CreateStudentcardComponent}
   ]},
   {path:'**',component:ErrorComponent}
 ];
