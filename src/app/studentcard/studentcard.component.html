@@ -1,0 +1,79 @@
+<div class="parent">
+    <div>
+        Search:
+        <input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="Search Student"> &nbsp;
+        Column:
+        <select [(ngModel)]="column">
+            <option>school_name</option>
+            <option>name</option>
+            <option>phone</option>
+            <option>dob</option>
+            <option>city</option>
+            <option>email</option>
+            <option>school_city</option>
+            <option>school_pin</option>
+        </select> &nbsp;
+        Order:
+        <select [(ngModel)]="order">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select> &nbsp;
+        
+        <button class="btn btn-primary" (click)="sort()">sort</button> &nbsp;
+        
+        Limit:
+        <select [(ngModel)]="limit">
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+        </select>  &nbsp;
+        Page:
+        <select [(ngModel)]="page">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>  &nbsp;
+        
+        <button class="btn btn-primary" (click)="pagination()">Pagination</button>
+
+        <button class="btn btn-info" routerLink="/dashboard/create-studentcard">Create new ID-Card</button>
+
+    </div>
+    <div class="child" *ngFor="let studentcard of studentcards">
+        <div class="card">
+            <div class="top">
+                <div class="topleft">
+                    <img class="img1" src="{{studentcard.school_logo}}" alt=""> &nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="topright">
+                    <h5>{{studentcard.school_name}}</h5>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="mleft">
+                    <p>Name: <b>{{studentcard.name}}</b></p>
+                    <p>Phone: <b>{{studentcard.phone}}</b></p>
+                    <p>D.O.B: <b>{{studentcard.dob}}</b></p>
+                    <p>City: <b>{{studentcard.city}}</b></p>
+                    <p>Email: <b>{{studentcard.email}}</b></p>
+
+                </div>
+                <div class="mright">
+                    <img class="img2" src="{{studentcard.profile_picture}}" alt="">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottomup">
+                    <p>School City: <b>{{studentcard.school_city}}</b></p>
+                    <p>School Pin: <b>{{studentcard.school_pin}}</b></p>
+                </div>
+                <div class="bottomdown">
+                    <button class="btn btn-warning">View</button>
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger" (click)="delete(studentcard.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

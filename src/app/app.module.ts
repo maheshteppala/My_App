@@ -13,7 +13,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 
@@ -28,6 +28,9 @@ import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { MovieComponent } from './movie/movie.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentcardComponent } from './studentcard/studentcard.component';
+import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
 
 @NgModule({
   declarations: [
@@ -53,13 +56,17 @@ import { ProfileComponent } from './profile/profile.component';
     WeatherComponent,
     BlogComponent,
     MovieComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateVehicleComponent,
+    StudentcardComponent,
+    CreateStudentcardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
