@@ -19,7 +19,7 @@ import { EmployeeComponent } from './employee/employee.component';
 
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { AccountComponent } from './account/account.component';
 import { MyntraComponent } from './myntra/myntra.component';
 import { MailComponent } from './mail/mail.component';
@@ -31,6 +31,21 @@ import { ProfileComponent } from './profile/profile.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentcardComponent } from './studentcard/studentcard.component';
 import { CreateStudentcardComponent } from './create-studentcard/create-studentcard.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
+import { TextAreaComponent } from './text-area/text-area.component';
 
 @NgModule({
   declarations: [
@@ -59,16 +74,37 @@ import { CreateStudentcardComponent } from './create-studentcard/create-studentc
     ProfileComponent,
     CreateVehicleComponent,
     StudentcardComponent,
-    CreateStudentcardComponent
+    CreateStudentcardComponent,
+    CreateUserComponent,
+    CreateStudentComponent,
+    VehicleDetailsComponent,
+    StudentDetailsComponent,
+    HooksComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    CapitalDirective,
+    BalancePipe,
+    TextAreaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
+    
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

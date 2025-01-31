@@ -69,8 +69,8 @@
                     <p>School Pin: <b>{{studentcard.school_pin}}</b></p>
                 </div>
                 <div class="bottomdown">
-                    <button class="btn btn-warning">View</button>
-                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-warning" routerLink="/dashboard/student-details/{{studentcard.id}}">View</button>
+                    <button class="btn btn-primary" routerLink="/dashboard/edit-studentcard/{{studentcard.id}}">Edit</button>
                     <button class="btn btn-danger" (click)="delete(studentcard.id)">Delete</button>
                 </div>
             </div>
