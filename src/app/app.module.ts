@@ -46,6 +46,7 @@ import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { TextAreaComponent } from './text-area/text-area.component';
     RatingComponent,
     CapitalDirective,
     BalancePipe,
-    TextAreaComponent
+    TextAreaComponent,
+    ToDoListComponent
   ],
   imports: [
     BrowserModule,

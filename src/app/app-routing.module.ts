@@ -39,6 +39,7 @@ import { RatingComponent } from './rating/rating.component';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 
 const routes: Routes = [
@@ -82,7 +83,8 @@ const routes: Routes = [
     {path:'about-ceo', canActivate:[AuthenticationGuard],component:AboutCeoComponent},
     {path:'about-company', canActivate:[AuthenticationGuard],component:AboutCompanyComponent},
     {path:'payment', loadChildren: () => import('./payment/payment.module'). then(m => m.PaymentModule)},
-    {path:'text-area', canActivate:[AuthenticationGuard],component:TextAreaComponent}
+    {path:'text-area', canActivate:[AuthenticationGuard],component:TextAreaComponent},
+    {path:'to-do-list', canActivate:[AuthenticationGuard],component:ToDoListComponent}
 
   ]},
   {path:'**',component:ErrorComponent}
