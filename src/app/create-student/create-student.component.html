@@ -1,0 +1,84 @@
+<div class="parent">
+    <div class="child">
+        <h1>Student Data</h1>
+<form action="" [formGroup]="studentForm">
+    <!-- <label for="name" >Name</label> -->
+    <input type="text" placeholder="Enter Your Name" id="name" name="name" formControlName="name" /><br><br>
+    <!-- <label for="fathername">Father Name</label> -->
+    <input type="text" placeholder="Enter Your Fathers Name" id="fathername" name="fathername" formControlName="fathername" /><br><br>
+    
+    <!-- <label for="mobile">Mobile Number</label> -->
+    <input type="number" placeholder="Enter Your Mobile Number" id="mobile" name="mobile" formControlName="mobile" /><br><br>
+    <div *ngIf="studentForm.get('mobile')?.invalid && studentForm.get('mobile')?.touched">
+        <p *ngIf="studentForm.get('mobile')?.errors?.['min']">*Enter Valid Mobile Number</p>
+        <p *ngIf="studentForm.get('mobile')?.errors?.['max']">*Enter Valid Mobile Number</p>
+    </div>
+    <!-- <label for="email">Email</label> -->
+    <input type="email" placeholder="Enter Your Email Id" id="email" name="email" formControlName="email" /><br><br>
+    <!-- <label for="dob">D.O.B</label> -->
+    <input type="date"  id="dob" name="dob" formControlName="dob" /><br><br>
+
+    <div formGroupName="address">
+        <!-- <label for="addressline">Address Line</label> -->
+        <input type="text" placeholder="Address line" formControlName="addressline" /><br><br>
+        
+        <!-- <label for="city">City</label> -->
+        <input type="text" placeholder="City" formControlName="city" /><br><br>
+        
+        <!-- <label for="state">State</label> -->
+        <input type="text" placeholder="State" formControlName="state" /><br><br>
+        
+        <!-- <label for="pincode">Pincode</label> -->
+        <input type="number" placeholder="pincode" formControlName="pincode" /><br><br>
+        <div *ngIf="studentForm.get('address')?.get('pincode')?.invalid && studentForm.get('address')?.get('pincode')?.touched">
+            <p *ngIf="studentForm.get('address')?.get('pincode')?.errors?.['required']">*Pincode Required</p>
+            <p *ngIf="studentForm.get('address')?.get('pincode')?.errors?.['min']">*Enter Valid Pincode</p>
+            <p *ngIf="studentForm.get('address')?.get('pincode')?.errors?.['max']">*Enter Valid Pincode</p>
+        </div>
+
+    </div>
+
+    <label>Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayscholar">
+    <label>Dayscholar</label>
+    <input type="radio" name="type" formControlName="type" value="hostel">
+    <label>Hostel</label><br>
+
+    <div *ngIf="studentForm.get('type')?.value=='dayscholar'">
+        <label for="">Bus Fee:</label>
+        <input type="number"  formControlName="busfee"><br>
+    </div>
+
+    <div *ngIf="studentForm.get('type')?.value=='hostel'">
+        <label for="">Hostel Fee:</label>
+        <input type="number" formControlName="hostelfee"><br>
+    </div>
+
+    <button (click)="addmarks()">Add Marks</button>
+
+    <div formArrayName="marks">
+        <div *ngFor="let marks of marksFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h2>marks{{i+1}}</h2>
+                <!-- <label for="">Class:</label> -->
+                <input type="number" placeholder="Enter Your Class" formControlName="class"><br><br>
+                
+                <!-- <label for="">Year:</label> -->
+                <input type="number" placeholder="Year of pass out" formControlName="year"><br><br>
+                
+                <!-- <label for="">Percentage:</label> -->
+                <input type="number" placeholder="percentage" formControlName="percentage"><br><br>
+
+                <button (click)="delete(i)">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <button type="submit" (click)="create()">Create</button>
+
+</form>
+    </div>
+</div>
+
+

@@ -1,0 +1,45 @@
+.top {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.btn-success {
+  width: 20%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li button {
+  margin-left: auto;
+  width: 15%;
+}
+
+input[type="checkbox"]:checked + h5 {
+  text-decoration: line-through;
+  color: grey;
+}

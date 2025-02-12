@@ -1,18 +1,18 @@
 <div class="linkedin" > 
 
 <div class="card" class="shadow p-3 mb-5 bg-white rounded" style="width:350px">
-    <div class="card-body" style="height: 450px;">
+    <div [formGroup]="loginForm" class="card-body" style="height: 450px;" >
         <h1>Sign in</h1>
         <p>Stay updated on your professional world</p>
         <div class="email">
-            <input type="email" class="form-control" id="email" placeholder="Email or Phone" name="email"><br>
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email or Phone" name="email"><br>
         </div> 
         <div class="password">
-            <input type="password" class="form-control" id="pwd" placeholder="Password" name="pswd"><br>
+            <input type="password" formControlName="password" class="form-control" id="pwd" placeholder="Password" name="pswd"><br>
         </div>
         <a href="">Forgot password?</a> <br>
         <div class="d-grid">
-            <button type="button" class="btn btn-primary btn-block" routerLink="/dashboard">Sign in</button>
+            <button type="button" (click)="login()" class="btn btn-primary btn-block" >Sign in</button>
         </div><br>
         <hr>
         <div class="e-grid">
@@ -27,3 +27,11 @@
 </div>
 
 
+<!-- <form action="" [formGroup]="loginForm">
+    <label for="">Email</label>
+    <input type="text" formControlName="email"><br>
+    <label for="">Password</label>
+    <input type="text" formControlName="password"><br>
+    <button (click)="login()">Login</button>
+
+</form> -->
